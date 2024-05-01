@@ -1,0 +1,695 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  HTML,
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    flex-wrap: wrap;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    list-style: none;
+    margin: 0 23px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  nav ul li a:hover {
+    color: rgb(153, 153, 226);
+    font-size: 1.01rem;
+    transition: all 0.2s;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  main hr {
+    border: 0;
+    background: #9c97f1;
+    height: 1.2px;
+    margin: 40px 84px;
+  }
+  .left {
+    font-size: 2rem;
+  }
+  .firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 0;
+  }
+  .firstSection > div {
+    width: 30%;
+  }
+  .leftSection {
+    font-size: 1.9rem;
+  }
+  
+  .leftSection .btn1,
+  .btn2,
+  .btn3 {
+    padding: 10px;
+    background: #1e2167;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn1 a {
+    text-decoration: none;
+    color: white;
+  }
+  .btn2 a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn3 a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .leftSection .buttons {
+    padding: 50px 0;
+  }
+  
+  .rightSection img {
+    width: 80%;
+  }
+  .purple {
+    color: rgb(170, 107, 228);
+  }
+  #element {
+    color: rgb(170, 107, 228);
+  }
+  .text-gray {
+    color: gray;
+  }
+  .secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 90vh;
+  }
+  .secondSection h1 {
+    font-size: 2rem;
+  }
+  .secondSection .box {
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+    display: flex;
+  }
+  .secondSection .vertical {
+    height: 93px;
+    width: 1px;
+    background-color: white;
+    margin: 0 150px;
+    /* margin: 0 6vw; */
+  }
+  
+  .image-top {
+    width: 23px;
+    position: relative;
+    top: -32px;
+    left: -10px;
+  }
+  .vertical-title {
+    position: relative;
+    top: 58px;
+    width: 275px;
+    font-size: 1.3rem;
+    margin-left: -2px;
+  }
+  .vertical-desc {
+    position: relative;
+    top: 70px;
+    color: gray;
+    width: 211px;
+    font-size: 1rem;
+    /* width: 300px; */
+  }
+  
+  .h1 {
+    font-size: 2rem;
+    margin-left: 123px;
+  }
+  
+  .colbox {
+    border: 4px solid white;
+    padding: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+  }
+  
+  .skills {
+    /* height: 300vh; */
+    height: auto;
+  }
+  .skills h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .web-skills {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .card {
+    width: 300px;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+  }
+  .card:hover {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* -------------Style for the image-------------- */
+  .card img {
+    max-width: 200px;
+    height: 100px;
+  }
+  
+  #skills-hr {
+    display: none;
+  }
+  
+  .web-skills a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .card1:hover {
+    border: none;
+  }
+  
+  /* -----------------visitor panel------------ */
+  
+  .visitor-panel {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    font-size: 1.2rem;
+  }
+  
+  #count {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  div#count {
+    margin: 20px;
+    background-color: rgb(170, 167, 167);
+  }
+  
+  /* --------------------footer-------------- */
+  
+  footer {
+    background-color: #0c0e1a;
+    color: white;
+    height: 250px;
+  }
+  .footer-first {
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+  }
+  .footer-second ul {
+    display: flex;
+    margin-left: 450px;
+    margin-top: -10px;
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+  .footer-second ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer-second ul:hover {
+    color: #1e2167;
+    cursor: pointer;
+  }
+  .footer-third ul {
+    display: flex;
+    margin-left: 1020px;
+    margin-top: -35px;
+    gap: 17px;
+    font-size: 2.2rem;
+  }
+  .footer-third ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer > div {
+    width: 223px;
+  }
+  .footer-rights {
+    text-align: center;
+    margin-top: 42px;
+    color: gray;
+    padding: 12px 0;
+  }
+  
+  .college img {
+    height: 700px;
+    width: 500px;
+  }
+  
+  /* About */
+  
+  .certificate img {
+    border: 4px solid rgb(130, 126, 126);
+    height: 420px;
+    width: 600px;
+    margin: 30px;
+    padding: 1px;
+    border-radius: 14px;
+    display: inline;
+    justify-content: center;
+    border-style: ridge;
+  }
+  
+  .certificate img:hover {
+    cursor: zoom-in;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  
+  .heading {
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 40px;
+    height: 220px;
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .heading:hover {
+    color: rgb(85, 84, 84);
+  }
+  
+  /* services */
+  
+  .service-heading {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card1 {
+    border: 2px solid seashell;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #05072e;
+  }
+  
+  .card p {
+    margin-top: 10px;
+  }
+  
+  /* Projects */
+  
+  .firstSec video {
+    height: 600px;
+    width: 700px;
+    margin-top: -175px;
+    padding: 50px;
+  }
+  .secondSec {
+    color: white;
+    margin-left: 838px;
+    margin-top: -55px;
+    padding: 10px;
+    width: 420px;
+  }
+  .secondSec h2 {
+    color: white;
+    margin-top: -460px;
+    margin-right: 280px;
+    width: 350px;
+  }
+  
+  .content {
+    height: 600px;
+  }
+  
+  .source-btn {
+    padding: 8px;
+    background: #1e2167;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .source-btn a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .secondSec .buttons {
+    margin-right: 65px;
+    margin-top: 25px;
+  }
+  
+  .source-btn {
+    margin: 5px;
+  }
+  
+  /* Contact me */
+  
+  .leftSection img {
+    height: 400px;
+    width: 300px;
+    border: 4px solid white;
+    border-radius: 50%;
+  }
+  
+  #hr {
+    background-color: white;
+    width: 428px;
+    margin-left: 0px;
+    height: 2px;
+  }
+  .insta button {
+    padding: 10px;
+    background: #1e2167;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .insta button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .school {
+    display: none;
+  }
+  
+  .strength {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 150px;
+    gap: 40px;
+  }
+  
+  .thirdSection img {
+    width: 90px;
+    border-radius: 50%;
+  }
+  
+  /* ------------------------Media query for mobile devices---------------------- */
+  
+  @media (max-width: 600px) {
+    HTML,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #0a0a55;
+      z-index: 1;
+      text-align: center;
+      gap: 34px;
+      height: 45%;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+    .navbar .left {
+      font-size: 1.3rem;
+    }
+    .fa-list {
+      font-size: 1.2rem;
+    }
+    .main {
+      flex-direction: column;
+    }
+  
+    .leftSection {
+      flex-direction: column;
+      font-size: 20px;
+      width: 100% !important;
+      margin-top: -60px;
+      margin-left: 100px;
+    }
+    .leftSection .buttons {
+      display: flex;
+      margin-left: -18px;
+      align-items: center;
+      width: 80px;
+    }
+    .rightSection img {
+      width: 250px;
+      margin-left: -75px;
+    }
+    .btn1,
+    .btn2,
+    .btn3 {
+      font-size: 16px;
+      width: 100px;
+      margin: 8px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .secondSection {
+      flex-direction: column;
+    }
+  
+    .secondSection .study {
+      font-size: 25px;
+    }
+    .box {
+      /* display: none; */
+      flex-direction: column;
+    }
+  
+    .secondSection .vertical {
+      height: auto;
+      margin: 10px;
+    }
+  
+    .vertical-title,
+    .vertical-desc {
+      left: 20px;
+      top: -20px;
+    }
+  
+    .secondSection .box {
+      width: 80vw;
+    }
+  
+    .image-top {
+      /* display: none; */
+      height: auto;
+    }
+    .text-gray {
+      display: none;
+    }
+    .study i {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .school {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 65px;
+      margin-top: -600px;
+      text-align: center;
+      display: none;
+    }
+    .school .vertical-title .vertical-desc {
+      text-align: center;
+    }
+    .school .vertical-title {
+      margin-left: -22px;
+    }
+    .h1 {
+      font-size: 30px;
+      margin-left: 32px;
+    }
+    .firstSection {
+      flex-direction: column;
+    }
+    .leftSection img {
+      height: 380px;
+      width: 280px;
+      margin-left: -10px;
+      margin-top: auto;
+    }
+  
+    .he .colbox {
+      /* text-align: center; */
+      height: 400px;
+      width: 213px;
+      margin-top: 30px;
+      margin-left: -95px;
+    }
+  
+    #rs form {
+      margin-left: -80px;
+      width: 260%;
+    }
+  
+    #hr {
+      width: 100%;
+    }
+  
+    main hr {
+      width: 280px;
+      margin-left: 40px;
+    }
+  
+    .secondSec {
+      flex-direction: column;
+      width: 240px;
+      font-size: 12px;
+      margin-left: 50px;
+      margin-top: 440px;
+      height: auto;
+    }
+    .skills {
+      height: auto;
+    }
+    #skills-hr {
+      display: flex;
+      background-color: rgb(166, 166, 202);
+    }
+    .skills img {
+      flex-wrap: wrap;
+      width: 100px;
+      height: 100px;
+    }
+    #express {
+      width: 170px;
+    }
+    .skills .web-skills {
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
+    .con-video {
+      flex-direction: column;
+    }
+    .firstSec video {
+      width: 90%;
+      height: 320px;
+      margin-left: -30px;
+    }
+  
+    .con-video .content {
+      margin-bottom: 70px;
+      height: auto;
+    }
+  
+    .certificate img {
+      width: 290px;
+      height: 220px;
+    }
+  
+    .service-container {
+      flex-direction: column;
+    }
+    .service-container .card {
+      height: auto;
+      width: auto;
+    }
+  
+    .thirdSection h1 {
+      text-align: center;
+      margin-left: auto;
+    }
+  
+    .strength {
+      margin-left: -95px;
+    }
+  
+    .heading:hover {
+      color: white;
+      transition: 0.5s;
+    }
+  
+    .card {
+      width: 300px !important;
+      margin-left: 6%;
+    }
+  
+    /* --------------------footer------------------ */
+  
+    footer {
+      background-color: black;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 315px;
+    }
+    .footer-first {
+      font-size: 14px;
+      margin-left: -50px;
+      height: 50px;
+    }
+    .footer-second {
+      margin-left: -410px;
+    }
+    .footer-second a {
+      font-size: 12px;
+    }
+    .footer-third {
+      margin-left: -950px;
+      margin-top: 50px;
+    }
+    .footer-third a {
+      font-size: 25px;
+    }
+  }

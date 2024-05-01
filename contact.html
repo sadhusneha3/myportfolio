@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneha - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" class="rel" />
+    <link rel="icon" href="icon.png" class="rel" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      class="rel"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <style>
+      #map {
+        height: 460px;
+        width: 60%;
+        margin-left: 20%;
+        border: 4px solid rgb(130, 127, 127);
+        border-style: ridge;
+        margin-bottom: 50px;
+      }
+      @media (max-width: 600px) {
+        #map {
+          width: 75%;
+          height: 360px;
+          border: 4px solid rgb(130, 127, 127);
+          border-style: ridge;
+          margin-bottom: 50px;
+          margin-left: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="left">Sneha's Portfolio</div>
+        <div class="right">
+          <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="services.html">Services</a>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+        <div class="navbar-toggle">
+          <button id="menu-toggle"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="firstSection">
+        <div class="leftSection">
+          <img src="sneha2.jpg" style="height: 320px" />
+        </div>
+        <div class="rightSection" id="rs">
+          <form>
+            <h1>Contact</h1>
+            <h3><i>Sneha Sadhu</i></h3>
+            <h3><i class="fa-solid fa-mobile"></i> Mobile: +91 8927316141</h3>
+            <h3>
+              <i class="fa-regular fa-envelope"></i> Email:
+              snehasadhu03@gmail.com
+            </h3>
+            <!-- <h3>
+              <i class="fa-regular fa-envelope"></i> Alternate Email:
+              snehasadhucstit33@gmail.com
+            </h3> -->
+            <hr id="hr" />
+            <h2>Address</h2>
+            <h3>
+              <i class="fa-regular fa-address-book"></i> Kolkata, West Bengal,
+              India
+            </h3>
+            <br />
+            <h2><i class="fa-regular fa-message"></i> Message Me</h2>
+            <h3 class="insta">
+              <button>
+                <a href="https://www.instagram.com/__sneha__sadhu__/">__sneha__sadhu__</a>
+              </button>
+            </h3>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <h1 style="display: flex; justify-content: center">
+        <i class="fa-solid fa-house-flag"></i> My Home Town Map :
+      </h1>
+      <div style="height: 30px"></div>
+      <div id="map"></div>
+      <script>
+        mapboxgl.accessToken =
+          "";
+        const map = new mapboxgl.Map({
+          container: "map", // container ID
+          // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+          style: "mapbox://styles/mapbox/streets-v12", // style URL
+          center: [88.4053, 22.8665], // starting position [lng, lat]
+          zoom: 14, // starting zoom
+        });
+        const marker2 = new mapboxgl.Marker({ color: "red" })
+          .setLngLat([88.401445, 22.865637])
+          .addTo(map);
+        // Add a scale control to the map
+        map.addControl(new mapboxgl.ScaleControl());
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
+
+        // const popup = new mapboxgl.Popup({ closeOnClick: false })
+        //   .setLngLat([88.401445, 22.865637])
+        //   .setHTML("<h2>My sweet house</h2>")
+        //   .addTo(map);
+
+        // const size = 200;
+
+        // // This implements `StyleImageInterface`
+        // // to draw a pulsing dot icon on the map.
+        // const pulsingDot = {
+        //   width: size,
+        //   height: size,
+        //   data: new Uint8Array(size * size * 4),
+
+        //   // When the layer is added to the map,
+        //   // get the rendering context for the map canvas.
+        //   onAdd: function () {
+        //     const canvas = document.createElement("canvas");
+        //     canvas.width = this.width;
+        //     canvas.height = this.height;
+        //     this.context = canvas.getContext("2d");
+        //   },
+
+        //   // Call once before every frame where the icon will be used.
+        //   render: function () {
+        //     const duration = 1000;
+        //     const t = (performance.now() % duration) / duration;
+
+        //     const radius = (size / 2) * 0.3;
+        //     const outerRadius = (size / 2) * 0.7 * t + radius;
+        //     const context = this.context;
+
+        //     // Draw the outer circle.
+        //     context.clearRect(0, 0, this.width, this.height);
+        //     context.beginPath();
+        //     context.arc(
+        //       this.width / 2,
+        //       this.height / 2,
+        //       outerRadius,
+        //       0,
+        //       Math.PI * 2
+        //     );
+        //     context.fillStyle = `rgba(255, 200, 200, ${1 - t})`;
+        //     context.fill();
+
+        //     // Draw the inner circle.
+        //     context.beginPath();
+        //     context.arc(
+        //       this.width / 2,
+        //       this.height / 2,
+        //       radius,
+        //       0,
+        //       Math.PI * 2
+        //     );
+        //     context.fillStyle = "rgba(255, 100, 100, 1)";
+        //     context.strokeStyle = "white";
+        //     context.lineWidth = 2 + 4 * (1 - t);
+        //     context.fill();
+        //     context.stroke();
+
+        //     // Update this image's data with data from the canvas.
+        //     this.data = context.getImageData(
+        //       0,
+        //       0,
+        //       this.width,
+        //       this.height
+        //     ).data;
+
+        //     // Continuously repaint the map, resulting
+        //     // in the smooth animation of the dot.
+        //     map.triggerRepaint();
+
+        //     // Return `true` to let the map know that the image was updated.
+        //     return true;
+        //   },
+        // };
+
+        // map.on("load", () => {
+        //   map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
+
+        //   map.addSource("dot-point", {
+        //     type: "geojson",
+        //     data: {
+        //       type: "FeatureCollection",
+        //       features: [
+        //         {
+        //           type: "Feature",
+        //           geometry: {
+        //             type: "Point",
+        //             coordinates: [88.401445, 22.865637], // icon position [lng, lat]
+        //           },
+        //         },
+        //       ],
+        //     },
+        //   });
+        //   map.addLayer({
+        //     id: "layer-with-pulsing-dot",
+        //     type: "symbol",
+        //     source: "dot-point",
+        //     layout: {
+        //       "icon-image": "pulsing-dot",
+        //     },
+        //   });
+        // });
+      </script>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Sneha's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="services.html">Services</a>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/__sneha__sadhu__/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/sadhusneha3"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/SSadhu97928"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sneha-sadhu-479653239/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.hackerrank.com/profile/snehasadhu03"
+                ><i class="fa-brands fa-hackerrank"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://discord.com/channels/@me"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="footer-fourth">
+            <ul>
+              <li>Home</li>
+              <li>Services</li>
+              <li>Projects</li>
+              <li>Contact</li>
+            </ul>
+          </div> -->
+      </div>
+      <section>
+        <div class="footer-rights">
+          Copyright &copy snehaportfolio.com | All rights reserved
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
